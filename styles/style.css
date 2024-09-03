@@ -1,0 +1,680 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); */
+
+/*********** RESET ***********/
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* CSS3 */
+}
+
+body {
+    font-family: "Varela Round", sans-serif;
+}
+
+a,
+img,
+li,
+span {
+    display: inline-block;
+}
+
+ul { list-style: none; }
+
+a {
+    text-decoration: none;
+    color: royalblue;
+}
+
+/*********** HEADER TITLES ***********/
+
+h1 {
+    font-size: 55px;
+    color: #FF9000FF;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 80px;
+    position: relative;
+    text-transform: capitalize;
+    text-align: center;
+    /* color: #c76e00; */
+}
+
+h2:after {
+    content: '';
+    height: 4px;
+    width: 62px;
+    position: absolute;
+    background-color: royalblue;
+    left: 50%;
+    margin-left: -31px;
+    bottom: -10px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+
+/*********** REUSABLE STYLES ***********/
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000b3;
+}
+
+.p-y {
+    padding: 120px 0;
+}
+
+.float-container {
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+
+.float-box,
+.float-img {
+    float: left;
+    border: 1px solid #888;
+    width: 30%;
+    position: relative;
+    text-align: center;
+}
+
+.float-box.mid,
+.float-img.mid {
+    margin: 0 5%;
+}
+
+.icon {
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.float-img {
+    border: none;
+}
+
+.background-img {
+    width: 100%;
+}
+
+.float-box:hover {
+    color: white;
+    background-color: #555;
+    /* background-color: #c76e00; */
+}
+
+.cover-section {
+    position: relative;
+    background-size: cover; /* CSS3 */
+    background-attachment: fixed;
+    color: #fff;
+    height: 350px;
+}
+
+
+/*********** HEADER ***********/
+
+.header {
+    background-color: #000000FF;
+    color: #FF9000FF;
+    position: fixed;
+    width: 100%;
+    padding: 5px;
+    line-height: 50px;
+    z-index: 10;
+    overflow: auto;
+}
+
+.header .logo {
+    float: left;
+    margin-left: 10%;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header .nav {
+    float: right;
+    margin-right: 10%;
+}
+
+.header .nav li {
+    margin-right: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.header .nav li.active:after,
+.header .nav li:hover:after {
+    content: '';
+    height: 2.5px;
+    background-color: #1591EAFF;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+
+/*********** HERO ***********/
+
+.hero {
+    height: 100vh;
+    background-image: url("../imgs/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* CSS3 */
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+.hero .overlay { background-color: #0008; }
+
+.hero .hero-content {
+    position: absolute;
+    width: 100%;
+    height: 170px;
+    top: 50%;
+    margin-top: -80px;
+    text-align: center;
+}
+
+.hero p {
+    line-height: 30px;
+}
+
+.hero .btns button {
+    border: none;
+    margin: 5px;
+    padding: 15px 0;
+    width: 150px;
+    color: #FFF;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.start { background-color: #FF9000FF; }
+.start:hover { background-color: #c76e00; }
+
+.learn { background-color: #1591EAFF; }
+.learn:hover { background-color: #426DAF; }
+
+
+/*********** ABOUT ***********/
+
+.about .float-box {
+    padding: 30px 15px;
+}
+
+.about .float-box p {
+    margin-bottom: 15px;
+    color: #899;
+}
+
+
+/*********** PORTFOLIO ***********/
+
+.portfolio {
+    background-color: #E8E8E8;
+}
+
+.portfolio .float-img {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.category {
+    color: #6195ff;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.portfolio h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.portfolio a {
+    width: 40px;
+    height: 40px;
+    background-color: #6195ff;
+    position: relative;
+}
+
+.portfolio a img {
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: -11px;
+}
+
+.portfolio .overlay {
+    padding: 10px;
+    visibility: hidden;
+}
+
+.portfolio .layer-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -90px;
+}
+
+.portfolio .float-img:hover .overlay {
+    visibility: visible;
+}
+
+
+/*********** SERVICES ***********/
+
+.services .float-box {
+    padding: 30px 15px 30px 70px;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.services .icon {
+    position: absolute;
+    left: 15px;
+    top: 26px;
+}
+
+.services p {
+    margin-bottom: 15px;
+    color: #999;
+}
+
+.services {
+    padding-bottom: 50px;
+}
+
+/*********** WHY ***********/
+
+.why {
+    background-color: #f9f9f9;
+}
+
+.why h2 {
+    text-align: start;
+    margin-bottom: 55px;
+}
+
+.why h2:after {
+    left: 0;
+    margin-left: 0;
+}
+
+.why .text {
+    padding-right: 20px;
+}
+
+.why .text p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.why .text ul {
+    padding: 15px 15px 15px 25px;
+    list-style-image: url("../imgs/icons/check-circle-regular.svg");
+    background-color: white;
+    overflow-y: auto;
+    /* height: 250px; */
+    height: 220px;  
+}
+
+.why .text li {
+    color: #888;
+    margin-bottom: 13px;
+    display: list-item;
+    position: relative;
+}
+
+/* .why .text li:before {
+    content: url("../imgs/icons/check-circle-regular.svg");
+    position: absolute;
+    width: 20px;
+    left: -20px;
+} */
+
+.why .text,
+.why .float-img {
+    width: 50%;
+    float: left;
+}
+
+.why .float-img li {
+    width: 12px;
+    height: 12px;
+    background-color: #a8a8a8;
+    border-radius: 50%; /* CSS3 */
+    margin: 12px 5px;
+}
+
+.why .float-img li:hover,
+.why .float-img li.active {
+    background-color: #6195ff;
+}
+
+
+/*********** NUMBERS ***********/
+
+.numbers {
+    background-image: url("../imgs/numbers-cover.jpeg");
+}
+
+.numbers .float-img {
+    width: 25%;
+    padding-top: 123.9px;
+}
+
+.numbers .float-img .icon {
+    margin-bottom: 15px;
+}
+
+.numbers .float-img h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+
+/*********** PRICES ***********/
+
+.prices {
+    background-color: #e8e8e8;
+}
+
+.prices .float-box {
+    padding: 30px 15px;
+    color: #999999;
+}
+
+.prices .float-box .plan { font-size: 17px; }
+
+.prices .float-box .dollar { font-size: 48px; margin: 9px 0 0 0; }
+
+.prices .float-box .month { font-size: 14px; font-weight: bold; }
+
+.price-circle {
+    color: #000;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border: 2px solid #6195ff;
+    border-radius: 50%; /* CSS3 */
+}
+
+.prices .float-box li {
+    display: list-item;
+    line-height: 1.8;
+}
+
+.purchase {
+    border: 2px solid #6195ff;
+    padding: 4px;
+    width: 120px;
+    margin-top: 15px;
+    background-color: #f0f0f0;
+}
+
+.prices .float-box:hover {
+    background-color: transparent;
+}
+
+.prices .float-box:hover:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0b0c0c80;
+}
+
+.prices .float-box:hover :is(.plan, .dollar, .month) { /* CSS3 */
+    color: #FF9000FF;
+}
+
+
+/*********** TESTIMONIALS ***********/
+
+.testimonials {
+    background-image: url("../imgs/Cascading-Style-Sheets.jpg");
+}
+
+.testimonials .float-container {
+    padding: 0 45px;
+}
+
+.testimonials .float-img {
+    width: 50%;
+    /* padding: 12% 0 0 9%; */
+    text-align: start;
+    padding: 130px 20px 5px 70px;
+}
+
+.testimonials .profile-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* CSS3 */
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
+.testimonials .client-data {
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    position: relative;
+    padding-left: 75px;
+}
+
+.testimonials .client-data h3 {
+    margin: 0;
+    font-size: 18.72px;
+    line-height: 26.21px;
+}
+
+.testimonials .client-data span {
+    color: #6195ff;
+}
+
+.testimonials .testimonial-desc {
+    font-size: 14px;
+}
+
+
+/*********** TEAM ***********/
+
+.team .float-img {
+    background-color: #D1CACA;
+    padding: 17px 13px;
+}
+
+.team .img-box {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.team .team-data h3 {
+    margin: 0;
+    color: #222222;
+    font-size: 18px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.team .team-data span {
+    font-size: 14px;
+    color: #999999;
+    text-transform: uppercase;
+}
+
+.team .overlay a {
+    background-color: #7BA7ff;
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin-left: auto;
+}
+
+.team .overlay a img {
+    height: 16px;
+    margin-top: 12px;
+}
+
+.team .background-img {
+    height: 185px;
+}
+
+.team .overlay {
+    background-color: #00000080;
+    visibility: hidden;
+}
+
+.team .float-img:hover .overlay { visibility: visible; }
+.team .float-img:hover .team-data h3 { color: #fff; }
+.team .float-img:hover .team-data span { color: blue; }
+
+.team .float-img:after {
+    content: '';
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #33333300;
+}
+
+.team .float-img:hover:after {
+    height: 100%;
+    background-color: #33333366;
+}
+
+
+/*********** BLOG ***********/
+
+.blog {
+    background-color: #f9f9f9;
+}
+
+.blog .float-container {
+    background-color: #e8e8e8;
+}
+
+.blog .float-img {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.blog .float-img .blog-img img {
+    max-width: 100%;
+}
+
+.blog .blog-info {
+    text-align: start;
+}
+
+.blog .info-list {
+    margin: 10px 0;
+}
+
+.blog .info-list li {
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.blog .info-list li img {
+    margin-bottom: -1px;
+}
+
+.blog .blog-info .blog-title {
+    font-size: 18px;
+    margin: 20px 0 25px;
+}
+
+.blog .blog-info .blog-desc {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #999;
+
+    /* "text truncation with ellipsis" --------- CSS3 */
+    overflow: hidden; /* Hide the overflowed text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+    display: -webkit-box; /* Create a flexible box layout */
+    -webkit-box-orient: vertical; /* Set the orientation of the box */
+    -webkit-line-clamp: 3; /* Limit the text to 3 lines */
+    line-clamp: 3;
+    /* ______________________________________________ */
+}
+
+.blog .float-img:after {
+    content: '';
+    position: absolute;
+    background-color: #FF900080;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0;
+}
+
+.blog .float-img:hover:after {
+    height: 100%;
+}
+
+
+/*********** FOOTER ***********/
+
+.footer {
+    background-color: #333;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.footer .links-list {
+    margin: 20px 0;
+}
+
+.footer .links-list .link {
+    width: 50px;
+    height: 50px;
+    background-color: #FF9000ff;
+    border-radius: 50%; /* CSS3 */
+    cursor: pointer;
+}
+
+.footer .links-list .link:hover {
+    background-color: #c76e00;
+}
+
+.footer .links-list .link img {
+    height: 25px;
+    margin-top: 12px;
+}
+
+.footer .copyright {
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+}
